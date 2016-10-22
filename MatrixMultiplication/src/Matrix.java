@@ -13,13 +13,16 @@ public class Matrix {
     }
 
     public Matrix multiply(Matrix m) {
-        for(int i = 0;i < ; i++){
-            for(int j = 0;j < ;j++){
-                for(int k = 0;k < ;k++){
-
+        int[][] array = new int[][]
+        for(i = 0;i < m.length;i++) {
+            for(j = 0; j < m.length;j++) {
+                array[i][j] = 0;
+                for(int k = 0;k < m.length;k++) {
+                    array[i][j] += m[i][k] * this[k][j];
                 }
             }
         }
+        return new Matrix(array);
     }
 
     public double[][] getMatrixArray(){
