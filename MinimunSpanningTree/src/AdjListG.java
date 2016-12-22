@@ -43,7 +43,6 @@ public class AdjListG {
 
                     //we add neighbor to each node in both directions.
                     graph.addNeighbor(v1, v2,weight);
-                    graph.addNeighbor(v2, v1,weight);
                 }
 
             }

@@ -23,7 +23,7 @@ public class Graph {
 
     public void addNeighbor(int v1, int v2, int weight) {
         adjacencyList[v1].add(new Edge(v1, v2,weight));
-        adjacencyList[v2].add(new Edge(v1, v2,weight));
+        adjacencyList[v2].add(new Edge(v2, v1,weight));
     }
 
     public void printGraph(){
@@ -35,6 +35,7 @@ public class Graph {
     private void printLinkedList2(int i, LinkedList<Edge> list) {
         System.out.print(" V -> " +i + " : ");
         Iterator<Edge> iter = list.iterator();
+
         while(iter.hasNext()){
             System.out.print(iter.next().dest+ " ");
         }

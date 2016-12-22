@@ -8,13 +8,11 @@ public class MST_Prims {
 
     private Graph undirectedGraph;
     private List<Edge> resultList = new ArrayList<Edge>();
-    private HashMap<Integer, LinkedList<Integer>> adjMap;
     HeapMap heap = new HeapMap();
     Map<Integer, Edge> mstOutput = new HashMap<Integer, Edge>();
 
     public MST_Prims(Graph x) {
         undirectedGraph = x;
-        //adjMap = undirectedGraph.getAdjList();
     }
 
     public void solvePrim() {
