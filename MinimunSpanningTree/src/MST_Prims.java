@@ -14,7 +14,7 @@ public class MST_Prims {
 
     public MST_Prims(Graph x) {
         undirectedGraph = x;
-        adjMap = undirectedGraph.getAdjList();
+        //adjMap = undirectedGraph.getAdjList();
     }
 
     public void solvePrim() {

@@ -5,11 +5,11 @@ import java.io.FileReader;
 /**
  * Created by aniquedavla on 12/21/16.
  */
-public class UndirectedGraph {
+public class AdjListG {
     private String fileName;
 
     //intialize undirectedGraph and return a undirectured graph.
-    public UndirectedGraph(String fileName) {
+    public AdjListG(String fileName) {
         this.fileName = fileName;
     }
 
@@ -20,10 +20,13 @@ public class UndirectedGraph {
         try {
             FileReader file = new FileReader(fileName);
             BufferedReader br = new BufferedReader(file);
+            int size = Integer.parseInt(br.readLine());
+            graph = new Graph(size);
+
             String line = br.readLine();
 
 
-            if (line != null) {
+            while (line != null) {
                 //read nodes
                 String[] nodeVal = line.split(" ");
                 int[] nodesList = new int[nodeVal.length];
@@ -31,15 +34,12 @@ public class UndirectedGraph {
                     nodesList[i] = Integer.parseInt(nodeVal[i]);
                 }
 
-                //create graph
-                 graph = new Graph(nodesList);
-
                 //read edges
                 while((line = br.readLine()) != null) {
                     String[] tokens = line.split(" ");
                     int v1 = Integer.parseInt(tokens[0]);
                     int v2 = Integer.parseInt(tokens[1]);
-                    int weight = Integer.parseInt(tokens[3]);
+                    int weight = Integer.parseInt(tokens[2]);
 
                     //we add neighbor to each node in both directions.
                     graph.addNeighbor(v1, v2,weight);
@@ -50,7 +50,7 @@ public class UndirectedGraph {
             br.close();
         }
         catch(Exception theEx) {
-            theEx.fillInStackTrace();
+            theEx.printStackTrace();
         }
         return graph;
     }
