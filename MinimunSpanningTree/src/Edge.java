@@ -1,7 +1,7 @@
 /**
  * Created by aniquedavla on 12/21/16.
  */
-public class Edge<T> {
+public class Edge {
     int src;
     int dest;
     int weight;

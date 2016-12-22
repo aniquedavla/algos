@@ -39,10 +39,11 @@ public class UndirectedGraph {
                     String[] tokens = line.split(" ");
                     int v1 = Integer.parseInt(tokens[0]);
                     int v2 = Integer.parseInt(tokens[1]);
+                    int weight = Integer.parseInt(tokens[3]);
 
                     //we add neighbor to each node in both directions.
-                    graph.addNeighbor(v1, v2);
-                    graph.addNeighbor(v2, v1);
+                    graph.addNeighbor(v1, v2,weight);
+                    graph.addNeighbor(v2, v1,weight);
                 }
 
             }

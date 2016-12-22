@@ -24,8 +24,10 @@ public class Graph {
 
     }
 
-    public void addNeighbor(int v1, int v2) {
+    public void addNeighbor(int v1, int v2, int weight) {
         adjMap.get(v1).add(v2);
+        adjacencyList[v1].add(new Edge(v1, v2,weight));
+        adjacencyList[v2].add(new Edge(v1, v2,weight));
     }
 
     public List<Integer> getNeighbors(int v) {
@@ -39,6 +41,20 @@ public class Graph {
             System.out.println();
         }
     }
+    public void printGraph(){
+        for(int i = 0; i < this.numbV; i++){
+            printLinkedList2(i, adjacencyList[i]);
+            System.out.println();
+        }
+    }
+    private void printLinkedList2(int i, LinkedList<Edge> list) {
+        System.out.print("Vertex -> " +i + " : ");
+        Iterator<Edge> iter = list.iterator();
+        while(iter.hasNext()){
+            System.out.print(iter.next().dest+ " | ");
+        }
+    }
+
     public HashMap<Integer, LinkedList<Integer>> getAdjList() {
         return adjMap;
     }
