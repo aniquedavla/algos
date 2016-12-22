@@ -11,11 +11,10 @@ public class UndirectedGraph {
     //intialize undirectedGraph and return a undirectured graph.
     public UndirectedGraph(String fileName) {
         this.fileName = fileName;
-        makeUndirectedGraph(fileName);
     }
 
     //takes a file of adj list and return an undirected graph.
-    private Graph makeUndirectedGraph(String fileName){
+    public Graph makeUndirectedGraph(){
         //read the file of adjaceny list.
         Graph graph = null;
         try {
