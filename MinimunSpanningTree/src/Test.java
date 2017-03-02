@@ -31,7 +31,7 @@ public class Test {
         System.out.println("===== Solved MST =====");
         System.out.println("Edges:   Weight");
 
-        for(Edge edge : primsMST.getMSTResult()){
+        for(Edge edge : primsMST.getMSTwResult()){
             System.out.println("("+edge.src + " to "+edge.dest + ")" + " -> "+ edge.weight);
         }
 
