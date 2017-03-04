@@ -5,17 +5,27 @@ public class LinkedList{
     Node head;
     Node tail;
 
+    public LinkedList(Node head, Node tail){
+        this.head = head;
+        this.tail = tail;
+    }
+
     public void addFirst(Node node){
         if(head != null){
             node.next = head;
-            head.prev = head;
+            head.prev = node;
+            node.prev = null;
+            head = node;
         } else {
             head = node;
+            tail = node;
+            head.prev = node;
             head.next = null;
+
         }
     }
 
-    public void remove(Node node){
+    public void removeHead(Node node){
         if(head !=null){
             return;
         }else{
@@ -23,13 +33,19 @@ public class LinkedList{
                 if(head.next == node){
                     Node foundNode = head.next;
                     foundNode.prev = foundNode.next;
+                    foundNode.next.prev = foundNode.prev;
                 }
             }
         }
     }
-    public class Node{
-        Node next;
-        Node prev;
-        int data;
+
+    public void printList(){
+        Node currentNode = this.head;
+        if(currentNode != null){
+            while(currentNode != null){
+                System.out.println(currentNode.data);
+                currentNode = currentNode.next;
+            }
+        } else System.out.println("Empty LinkedList");
     }
 }
