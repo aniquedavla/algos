@@ -5,6 +5,16 @@ public class LinkedList{
     Node head;
     Node tail;
 
+    public void addFirst(Node node){
+        if(head != null){
+            node.next = head;
+            head.prev = head;
+        } else {
+            head = node;
+            head.next = null;
+        }
+    }
+
     public void remove(Node node){
         if(head !=null){
             return;
