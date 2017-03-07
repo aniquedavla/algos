@@ -15,4 +15,19 @@ public class TestAlgos {
         list.printList();
         System.out.println(Strings.reverseString("Anique"));
     }
+    public boolean binarySearchRecursive(int[] number, int numberToFind, int leftI, int rightI){
+        //protects int overflow by rouding up for large leftI and rightI
+        int midI = (leftI + (rightI - leftI)) / 2;
+        if
+        if(number[numberToFind] < number[midI]){
+            binarySearchRecursive(number,numberToFind,leftI,midI-1);
+        }else{
+            binarySearchRecursive(number,numberToFind,midI+1,rightI);
+        }
+
+    }
+
+    public boolean binarySearchIterative(int[] array, int value){
+        int i=0
+    }
 }

@@ -3,7 +3,18 @@
  */
 public class Strings {
 
-
+    /*IN:"HELLO WORLD"
+    OUT:"WORLD HELLO"*/
+    static String reverseWords(String s){
+//        find index of first space
+//                copy the work before the space after the word after the space?
+        //substring the first word to the add.
+        int spaceI = s.indexOf(" ");
+        String reversedWord ="";
+        reversedWord += s.subSequence(spaceI,s.length()-1);
+        reversedWord += " " + s.subSequence(0,spaceI-1);
+        return reversedWord;
+    }
     /*
     O(n)
     IN: anique
