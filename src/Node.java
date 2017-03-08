@@ -1,12 +1,12 @@
 /**
- * Created by aniquedavla on 3/3/17.
+ * Created by aniquedavla on 3/7/17.
  */
 public class Node {
-    Node next;
-    Node prev;
-    int data;
+        Node next;
+        Node prev;
+        int data;
 
-    public Node(int data){
-        this.data = data;
-    }
+        public Node(int data){
+            this.data = data;
+        }
 }
