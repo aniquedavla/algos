@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/MatrixMultiplication/MatrixMultiplication.iml" filepath="$PROJECT_DIR$/MatrixMultiplication/MatrixMultiplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MinimunSpanningTree/MinimunSpanningTree.iml" filepath="$PROJECT_DIR$/MinimunSpanningTree/MinimunSpanningTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuickSort_Part2/QuickSort_Part2.iml" filepath="$PROJECT_DIR$/QuickSort_Part2/QuickSort_Part2.iml" />
       <module fileurl="file://$PROJECT_DIR$/algos.iml" filepath="$PROJECT_DIR$/algos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sjsu.davis.cs.146.project3.maze/sjsu.davis.cs.146.project3.maze.iml" filepath="$PROJECT_DIR$/sjsu.davis.cs.146.project3.maze/sjsu.davis.cs.146.project3.maze.iml" />
     </modules>
   </component>
 </project>
